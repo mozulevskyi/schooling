@@ -5,19 +5,49 @@
 #   git config --global core.excludesfile '~/.gitignore_global'
 
 # Ignore bundler config.
+*.rbc
+*.sassc
+.sass-cache
+capybara-*.html
 /.bundle
-
-# Ignore the default SQLite database.
-/db/*.sqlite3
-/db/*.sqlite3-journal
-
-# Ignore all logfiles and tempfiles.
+/vendor/bundle
 /log/*
 /tmp/*
-!/log/.keep
-!/tmp/.keep
-
-/node_modules
-/yarn-error.log
-
+/db/*.sqlite3
+/public/assets/*
+/public/system/*
+/public/uploads/*
+/coverage/
+/spec/tmp/*
+**.orig
+rerun.txt
+pickle-email-*.html
+.DS_Store
+doc/
+*.swp
+*~
+.project
+server.csr
+server.key
+*.crt
+*.key
+/public/default_questions.json
+.secret
+*.pdf.env
+#database.yml
+.idea
+#config/secrets.yml
+	config/cucumber.yml
+	lib/tasks/cucumber.rake
+	script/
+	staging.dump
+	test/
+*.dump
 .byebug_history
+crontab.xmetryxapp/public/packs
+/public/packs-test
+/node_modules
+yarn-debug.log*
+.yarn-integrity
+public/packs
+yarn-error.log*
