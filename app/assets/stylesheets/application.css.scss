@@ -12,4 +12,7 @@
  *
  *= require_tree .
  *= require_self
+ *= require air_datepicker
  */
+@import "pickadate/default";
+@import "pickadate/default.date";

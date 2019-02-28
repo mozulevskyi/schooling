@@ -10,61 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181005153120) do
+ActiveRecord::Schema.define(version: 20190228143936) do
 
-  create_table "bad_pupils", force: :cascade do |t|
-    t.string "first_name"
-    t.string "middle_name"
-    t.string "second_name"
-    t.integer "date_of_birth"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "people", force: :cascade do |t|
-    t.string "first_name"
-    t.string "middle_name"
-    t.string "second_name"
-    t.integer "date_of_birth"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "polygons", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "principals", force: :cascade do |t|
-    t.string "first_name"
-    t.string "middle_name"
-    t.string "second_name"
-    t.integer "date_of_birth"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "pupils", force: :cascade do |t|
-    t.string "first_name"
-    t.string "middle_name"
-    t.string "second_name"
-    t.integer "date_of_birth"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "rectangles", force: :cascade do |t|
-    t.string "sides"
-    t.string "corners"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "teachers", force: :cascade do |t|
-    t.string "first_name"
-    t.string "middle_name"
-    t.string "second_name"
-    t.integer "date_of_birth"
+  create_table "articles", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
+    t.date "expire_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

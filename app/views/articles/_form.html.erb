@@ -1,0 +1,48 @@
+<%= form_with(model: article, local: true) do |f| %>
+  <% if article.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(article.errors.count, "error") %> prohibited this article from being saved:</h2>
+
+      <ul>
+      <% article.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <div class="field">
+      <%= f.label :name %><br>
+      <%= f.text_field :name %>
+    </div>
+
+    <div class="field">
+      <%= f.label :description %><br>
+      <%= f.text_area :description %>
+    </div>
+
+    <!--<div class="field">-->
+      <!--<%#= f.label :expire_date %>-->
+      <!--<%#= f.text_field :expire_date %>-->
+    <!--</div>-->
+
+    <div class="field">
+      <%= f.label :expire_date %><br>
+      <%= f.text_field :expire_date, id: 'datepicker_here' %>
+    </div>
+
+    <!--<input type='text' class="datepicker-here" data-position="right top" />-->
+
+    <%#= f.label :expire_date %>
+    <%# f.text_field :expire_date, class: 'form-control datepicker', placeholder: 'mm/dd/yyyy' %>
+
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+<% end %>
+
+<script type="text/javascript">
+  $('#datepicker_here').datepicker({
+    inline: true,
+  })
+</script>
